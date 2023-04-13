@@ -8,7 +8,7 @@ import java.util.List;
 public interface HospitalService
 {
 
-    List<Hospital> getHospitals(boolean filterByArea, int userID);
+    List<Hospital> getHospitals(boolean filterByCity, int userID);
 
     Hospital getHospitalInformation(int hospitalID);
 

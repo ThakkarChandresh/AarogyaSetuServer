@@ -34,12 +34,12 @@ public class HospitalServiceImpl implements HospitalService
     private final UserService userService = UserServiceImpl.getInstance();
 
     @Override
-    public List<Hospital> getHospitals(boolean filterByArea, int userID)
+    public List<Hospital> getHospitals(boolean filterByCity, int userID)
     {
 
-        if (filterByArea)
+        if (filterByCity)
         {
-            return this.hospitalRepository.getAllHospitals().stream().filter(hospital -> hospital.getArea().equalsIgnoreCase(this.userService.getUser(userID).getArea())).collect(Collectors.toList());
+            return this.hospitalRepository.getAllHospitals().stream().filter(hospital -> hospital.getCity().equalsIgnoreCase(this.userService.getUser(userID).getCity())).collect(Collectors.toList());
         }
         else
         {

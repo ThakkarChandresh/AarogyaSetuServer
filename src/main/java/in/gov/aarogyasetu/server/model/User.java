@@ -1,18 +1,18 @@
 package in.gov.aarogyasetu.server.model;
 
-import in.gov.aarogyasetu.server.util.BaseMethods;
+import in.gov.aarogyasetu.server.util.UtilityMethods;
 
 
 public class User
 {
 
-    private final int userID = BaseMethods.getUniqueId();
+    private final int userID = UtilityMethods.getUniqueId();
 
     private String fullName;
 
     private long contactNumber;
 
-    private String area;
+    private String city;
 
     private String symptoms;
 
@@ -24,14 +24,14 @@ public class User
 
     private int admittedToHospital = -1;
 
-    public User(String fullName, long contactNumber, String area, String symptoms, String medicines, String status, String password)
+    public User(String fullName, long contactNumber, String city, String symptoms, String medicines, String status, String password)
     {
 
         this.fullName = fullName;
 
         this.contactNumber = contactNumber;
 
-        this.area = area;
+        this.city = city;
 
         this.symptoms = symptoms;
 
@@ -72,16 +72,16 @@ public class User
         this.contactNumber = contactNumber;
     }
 
-    public String getArea()
+    public String getCity()
     {
 
-        return area;
+        return city;
     }
 
-    public void setArea(String area)
+    public void setCity(String city)
     {
 
-        this.area = area;
+        this.city = city;
     }
 
     public String getSymptoms()

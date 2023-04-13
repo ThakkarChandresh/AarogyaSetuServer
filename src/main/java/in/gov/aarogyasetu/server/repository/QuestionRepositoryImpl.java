@@ -13,7 +13,7 @@ public class QuestionRepositoryImpl implements QuestionRepository
 
         questions.add("1.Have you been in close contact with a confirmed case of Covid-19? (Yes/No)");
 
-        questions.add("2.Have you travelled corona affected area in last 14 days? (Yes/No)");
+        questions.add("2.Have you travelled corona affected city in last 14 days? (Yes/No)");
 
         questions.add("3.Is your body temperature above 99°F? (Yes/No)");
 

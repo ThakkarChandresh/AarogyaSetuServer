@@ -1,6 +1,6 @@
 package in.gov.aarogyasetu.server.delegator;
 
-import in.gov.aarogyasetu.server.controller.AreaController;
+import in.gov.aarogyasetu.server.controller.CityController;
 import in.gov.aarogyasetu.server.controller.CoronaStatusController;
 import in.gov.aarogyasetu.server.controller.FacilityController;
 import in.gov.aarogyasetu.server.controller.UserController;
@@ -29,7 +29,7 @@ public class RequestDelegator
 
             case "2" ->
             {
-                return AreaController.getInstance().getActiveCases(request.getJSONObject("RequestBody").getString("area"));
+                return CityController.getInstance().getActiveCases(request.getJSONObject("RequestBody").getString("city"));
             }
 
             case "3" ->
@@ -49,7 +49,7 @@ public class RequestDelegator
 
             case "6" ->
             {
-                return FacilityController.getInstance().getHospitalsList(request.getJSONObject("RequestBody").getBoolean("filterByArea"), request.getJSONObject("RequestBody").getString("token"));
+                return FacilityController.getInstance().getHospitalsList(request.getJSONObject("RequestBody").getBoolean("filterByCity"), request.getJSONObject("RequestBody").getString("token"));
             }
             case "7" ->
             {

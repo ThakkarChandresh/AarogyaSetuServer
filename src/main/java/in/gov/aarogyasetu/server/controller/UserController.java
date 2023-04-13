@@ -4,7 +4,7 @@ import in.gov.aarogyasetu.server.service.TokenService;
 import in.gov.aarogyasetu.server.service.TokenServiceImpl;
 import in.gov.aarogyasetu.server.service.UserService;
 import in.gov.aarogyasetu.server.service.UserServiceImpl;
-import in.gov.aarogyasetu.server.util.BaseMethods;
+import in.gov.aarogyasetu.server.util.UtilityMethods;
 import in.gov.aarogyasetu.server.util.JWTUtil;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.json.JSONObject;
@@ -120,7 +120,7 @@ public class UserController
 
         try
         {
-            if ((userID = BaseMethods.validateToken(token)) != -1)
+            if ((userID = UtilityMethods.validateToken(token)) != -1)
             {
                 response.put("StatusCode", 200);
 

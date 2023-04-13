@@ -34,17 +34,17 @@ public class UserServiceImpl implements UserService
 
     private final UserDetailsRepository userDetailsRepository = UserDetailsRepositoryImpl.getInstance();
 
-    private final AreaService areaService = AreaServiceImpl.getInstance();
+    private final CityService cityService = CityServiceImpl.getInstance();
 
     @Override
     public int register(Map<String, Object> userDetail)
     {
 
-        User user = new User(userDetail.get("fullName").toString(), Long.parseLong(userDetail.get("contactNumber").toString()), userDetail.get("area").toString(), userDetail.get("symptoms").toString(), userDetail.get("medicines").toString(), userDetail.get("status").toString(), userDetail.get("password").toString());
+        User user = new User(userDetail.get("fullName").toString(), Long.parseLong(userDetail.get("contactNumber").toString()), userDetail.get("city").toString(), userDetail.get("symptoms").toString(), userDetail.get("medicines").toString(), userDetail.get("status").toString(), userDetail.get("password").toString());
 
-        int activeCase = this.areaService.getActiveCases(user.getArea());
+        int activeCase = this.cityService.getActiveCases(user.getCity());
 
-        this.areaService.updateActiveCases(user.getArea(), ++activeCase);
+        this.cityService.updateActiveCases(user.getCity(), ++activeCase);
 
         return this.userDetailsRepository.addOrUpdate(user);
 

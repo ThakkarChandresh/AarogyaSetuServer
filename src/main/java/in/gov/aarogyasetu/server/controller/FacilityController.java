@@ -2,7 +2,7 @@ package in.gov.aarogyasetu.server.controller;
 
 import in.gov.aarogyasetu.server.exceptions.NoSuchHospitalException;
 import in.gov.aarogyasetu.server.service.*;
-import in.gov.aarogyasetu.server.util.BaseMethods;
+import in.gov.aarogyasetu.server.util.UtilityMethods;
 import in.gov.aarogyasetu.server.util.JWTUtil;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.json.JSONObject;
@@ -35,7 +35,7 @@ public class FacilityController
         return facilityControllerInstance;
     }
 
-    public JSONObject getHospitalsList(boolean filterByArea, String token)
+    public JSONObject getHospitalsList(boolean filterByCity, String token)
     {
 
         JSONObject response = new JSONObject();
@@ -46,13 +46,13 @@ public class FacilityController
 
         try
         {
-            if ((userID = BaseMethods.validateToken(token)) != -1)
+            if ((userID = UtilityMethods.validateToken(token)) != -1)
             {
                 response.put("StatusCode", 200);
 
                 response.put("StatusMessage", "OK");
 
-                responseBody.put("hospitals", this.hospitalService.getHospitals(filterByArea, userID));
+                responseBody.put("hospitals", this.hospitalService.getHospitals(filterByCity, userID));
 
                 token = JWTUtil.getJWT(String.valueOf(userID));
 
@@ -101,7 +101,7 @@ public class FacilityController
 
         try
         {
-            if ((userID = BaseMethods.validateToken(token)) != -1)
+            if ((userID = UtilityMethods.validateToken(token)) != -1)
             {
                 response.put("StatusCode", 200);
 
@@ -180,7 +180,7 @@ public class FacilityController
 
         try
         {
-            if ((userID = BaseMethods.validateToken(token)) != -1)
+            if ((userID = UtilityMethods.validateToken(token)) != -1)
             {
                 response.put("StatusCode", 200);
 

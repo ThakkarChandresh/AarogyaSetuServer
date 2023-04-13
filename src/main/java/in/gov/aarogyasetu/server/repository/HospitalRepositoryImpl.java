@@ -14,31 +14,31 @@ public class HospitalRepositoryImpl implements HospitalRepository
     private HospitalRepositoryImpl()
     {
 
-        Hospital hospitalOne = new Hospital("Zydus Hospitals", "Dr. Chandresh", "Gota", 8401547875L, 10);
+        Hospital hospitalOne = new Hospital("Zydus Hospitals", "Dr. Chandresh", "Ahmedabad", 8401547875L, 10);
 
         hospitals.put(hospitalOne.getHospitalID(), hospitalOne);
 
-        Hospital hospitalTwo = new Hospital("Jivraj Mehta", "Dr. Deven", "Vasna", 8401547876L, 20);
+        Hospital hospitalTwo = new Hospital("Jivraj Mehta", "Dr. Deven", "Ahmedabad", 8401547876L, 20);
 
         hospitals.put(hospitalTwo.getHospitalID(), hospitalTwo);
 
-        Hospital hospitalThree = new Hospital("Marengo CIMS Hospital", "Dr. Mihir", "Gota", 8401547877L, 5);
+        Hospital hospitalThree = new Hospital("Marengo CIMS Hospital", "Dr. Mihir", "Ahmedabad", 8401547877L, 5);
 
         hospitals.put(hospitalThree.getHospitalID(), hospitalThree);
 
-        Hospital hospitalFour = new Hospital("Sagar Hospital", "Dr. Sagar", "Vasna", 8401547878L, 30);
+        Hospital hospitalFour = new Hospital("Sagar Hospital", "Dr. Sagar", "Surat", 8401547878L, 30);
 
         hospitals.put(hospitalFour.getHospitalID(), hospitalFour);
 
-        Hospital hospitalFive = new Hospital("Ansh Women Hospital", "Dr. Ansh", "Bopal", 8401547879L, 15);
+        Hospital hospitalFive = new Hospital("Ansh Women Hospital", "Dr. Ansh", "Surat", 8401547879L, 15);
 
         hospitals.put(hospitalFive.getHospitalID(), hospitalFive);
 
-        Hospital hospitalSix = new Hospital("Jankalyan Hospital", "Dr. Purvi", "Narol", 8401547881L, 29);
+        Hospital hospitalSix = new Hospital("Jankalyan Hospital", "Dr. Purvi", "Rajkot", 8401547881L, 29);
 
         hospitals.put(hospitalSix.getHospitalID(), hospitalSix);
 
-        Hospital hospitalSeven = new Hospital("Gujarat Child Care Hospital", "Dr. Manas", "Satellite", 8401547882L, 22);
+        Hospital hospitalSeven = new Hospital("Gujarat Child Care Hospital", "Dr. Manas", "Vadodra", 8401547882L, 22);
 
         hospitals.put(hospitalSeven.getHospitalID(), hospitalSeven);
     }

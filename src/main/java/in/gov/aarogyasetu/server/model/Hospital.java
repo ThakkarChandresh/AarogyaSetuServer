@@ -1,31 +1,31 @@
 package in.gov.aarogyasetu.server.model;
 
-import in.gov.aarogyasetu.server.util.BaseMethods;
+import in.gov.aarogyasetu.server.util.UtilityMethods;
 
 
 public class Hospital
 {
 
-    private final int hospitalID = BaseMethods.getUniqueId();
+    private final int hospitalID = UtilityMethods.getUniqueId();
 
     private String hospitalName;
 
     private String doctorName;
 
-    private String area;
+    private String city;
 
     private long contactNumber;
 
     private int availableBeds;
 
-    public Hospital(String hospitalName, String doctorName, String area, long doctorContactNumber, int availableBeds)
+    public Hospital(String hospitalName, String doctorName, String city, long doctorContactNumber, int availableBeds)
     {
 
         this.hospitalName = hospitalName;
 
         this.doctorName = doctorName;
 
-        this.area = area;
+        this.city = city;
 
         this.contactNumber = doctorContactNumber;
 
@@ -62,16 +62,16 @@ public class Hospital
         this.doctorName = doctorName;
     }
 
-    public String getArea()
+    public String getCity()
     {
 
-        return area;
+        return city;
     }
 
-    public void setArea(String area)
+    public void setCity(String city)
     {
 
-        this.area = area;
+        this.city = city;
     }
 
     public long getContactNumber()

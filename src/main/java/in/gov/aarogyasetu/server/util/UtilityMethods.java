@@ -6,7 +6,7 @@ import in.gov.aarogyasetu.server.repository.TokenRepositoryImpl;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
-public class BaseMethods
+public class UtilityMethods
 {
 
     private static final AtomicInteger ID = new AtomicInteger(1000);
